@@ -53,6 +53,7 @@ namespace PokemonReviewApp.Controllers
         public IActionResult GetPokemonByCategoryId(int categoryId)
         {
             var pokemons = _mapper.Map<List<PokemonDto>>(_categoryRepository.GetPokemonByCategory(categoryId));
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
