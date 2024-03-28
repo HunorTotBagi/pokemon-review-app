@@ -1,6 +1,6 @@
 ﻿namespace PokemonReviewApp.Dto
 {
-    public class PokemonDTO
+    public class PokemonDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
