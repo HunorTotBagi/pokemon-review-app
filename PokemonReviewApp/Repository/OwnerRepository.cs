@@ -30,6 +30,12 @@ namespace PokemonReviewApp.Repository
             return saved > 0 ? true : false;
         }
 
+        public bool UpdateOwner(Owner owner)
+        {
+            _context.Update(owner);
+            return Save();
+        }
+
         public ICollection<Owner> GetOwners()
         {
             return _context.Owners.OrderBy(o => o.Id).ToList();
