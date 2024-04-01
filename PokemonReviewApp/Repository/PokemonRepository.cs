@@ -79,5 +79,11 @@ namespace PokemonReviewApp.Repository
             _context.Update(pokemon);
             return Save();
         }
+
+        public bool DeletePokemon(Pokemon pokemonId)
+        {
+            _context.Remove(pokemonId);
+            return Save();
+        }
     }
 }
